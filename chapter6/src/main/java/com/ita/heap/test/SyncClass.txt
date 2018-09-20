@@ -1,0 +1,118 @@
+Classfile /C:/Users/workspace/introduction-to-algorithms/out/production/chapter6/com/ita/heap/test/SynchronizedTest.class
+  Last modified 2018-9-10; size 726 bytes
+  MD5 checksum 8ea9536079ac943d69d32972cd8e097d
+  Compiled from "SynchronizedTest.java"
+public class com.ita.heap.test.SynchronizedTest
+  SourceFile: "SynchronizedTest.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#22         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #23.#24        //  java/lang/System.out:Ljava/io/PrintStream;
+   #3 = String             #25            //  Hello World
+   #4 = Methodref          #26.#27        //  java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = Class              #28            //  com/ita/heap/test/SynchronizedTest
+   #6 = Class              #29            //  java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               Lcom/ita/heap/test/SynchronizedTest;
+  #14 = Utf8               doSth
+  #15 = Utf8               doSth1
+  #16 = Utf8               StackMapTable
+  #17 = Class              #28            //  com/ita/heap/test/SynchronizedTest
+  #18 = Class              #29            //  java/lang/Object
+  #19 = Class              #30            //  java/lang/Throwable
+  #20 = Utf8               SourceFile
+  #21 = Utf8               SynchronizedTest.java
+  #22 = NameAndType        #7:#8          //  "<init>":()V
+  #23 = Class              #31            //  java/lang/System
+  #24 = NameAndType        #32:#33        //  out:Ljava/io/PrintStream;
+  #25 = Utf8               Hello World
+  #26 = Class              #34            //  java/io/PrintStream
+  #27 = NameAndType        #35:#36        //  println:(Ljava/lang/String;)V
+  #28 = Utf8               com/ita/heap/test/SynchronizedTest
+  #29 = Utf8               java/lang/Object
+  #30 = Utf8               java/lang/Throwable
+  #31 = Utf8               java/lang/System
+  #32 = Utf8               out
+  #33 = Utf8               Ljava/io/PrintStream;
+  #34 = Utf8               java/io/PrintStream
+  #35 = Utf8               println
+  #36 = Utf8               (Ljava/lang/String;)V
+{
+  public com.ita.heap.test.SynchronizedTest();
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   Lcom/ita/heap/test/SynchronizedTest;
+
+  public synchronized void doSth();
+    flags: ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #3                  // String Hello World
+         5: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: return
+      LineNumberTable:
+        line 6: 0
+        line 7: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       9     0  this   Lcom/ita/heap/test/SynchronizedTest;
+
+  public void doSth1();
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: ldc_w         #5                  // class com/ita/heap/test/SynchronizedTest
+         3: dup
+         4: astore_1
+         5: monitorenter
+         6: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         9: ldc           #3                  // String Hello World
+        11: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        14: aload_1
+        15: monitorexit
+        16: goto          24
+        19: astore_2
+        20: aload_1
+        21: monitorexit
+        22: aload_2
+        23: athrow
+        24: return
+      Exception table:
+         from    to  target type
+             6    16    19   any
+            19    22    19   any
+      LineNumberTable:
+        line 10: 0
+        line 11: 6
+        line 12: 14
+        line 13: 24
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      25     0  this   Lcom/ita/heap/test/SynchronizedTest;
+      StackMapTable: number_of_entries = 2
+           frame_type = 255 /* full_frame */
+          offset_delta = 19
+          locals = [ class com/ita/heap/test/SynchronizedTest, class java/lang/Object ]
+          stack = [ class java/lang/Throwable ]
+           frame_type = 250 /* chop */
+          offset_delta = 4
+
+}
+
+Process finished with exit code 0
